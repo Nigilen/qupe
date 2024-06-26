@@ -1,0 +1,68 @@
+.hero {
+  background-color: #7029CB;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-slider {
+  overflow-x: hidden;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.slider-item {
+  gap: 32px;
+  padding: 51.75px 409.78px 66.25px 308.22px;
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  margin: 0;
+}
+
+.hero-button {
+  background-color: #FF4B4B;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 25px;
+  font-size: 24px;
+  line-height: 28.13px;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+}
+
+.hero-button:hover {
+  box-shadow: 2px 5px 10px 0 #497957;
+}
+
+.slider-control {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-control--right {
+  inset-inline-end: 50.82px;
+  inset-block: 0;
+
+}
+.slider-control--left {
+  inset-inline-start: 50.75px;
+  inset-block: 0;
+}

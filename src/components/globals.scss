@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #ffffff;
+  background-color: #A6C9FF;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+a {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+}

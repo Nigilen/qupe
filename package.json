@@ -35,6 +35,7 @@
     "stylelint-config-standard-scss": "^13.1.0"
   },
   "dependencies": {
+    "gulp-cssimport": "^7.0.0",
     "stylelint": "^16.6.1"
   }
 }

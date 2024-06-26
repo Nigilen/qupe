@@ -1,0 +1,39 @@
+.header {
+  padding: 55px 55px 48px clamp(3.4375rem, 0.4894rem + 12.5786vw, 9.6875rem);
+  background-color: #B47FF6;
+  margin-bottom: 40px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-gap: clamp(1.25rem, 0.0708rem + 5.0314vw, 3.75rem);
+}
+
+.nav-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  color: #ffffff;
+  transition-duration: 0.3s;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 0.8302rem + 1.2579vw, 1.75rem);
+  line-height: 45px;
+}
+
+.nav-link:hover {
+  text-decoration-color: #fff;
+  font-weight: 700;
+}

@@ -7,6 +7,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mediaquery = require('postcss-combine-media-query');
 const cssnano = require('cssnano');
+const cssimport = require('gulp-cssimport');
 const htmlMinify = require('html-minifier');
 const gulpPug = require('gulp-pug');
 const sass = require('gulp-sass')(require('sass'));
@@ -34,20 +35,6 @@ function html() {
 
 exports.html = html;
 
-function css() {
-	const plugins = [
-    autoprefixer(),
-    mediaquery(),
-		cssnano()
-	];
-  return gulp.src('src/blocks/**/*.css')
-    .pipe(plumber())
-    .pipe(concat('bundle.css'))
-		.pipe(postcss(plugins))
-    .pipe(gulp.dest('dist/'))
-}
-
-exports.css = css;
 
 function scripts() {
   return gulp.src('src/scripts/*.js')
@@ -55,6 +42,14 @@ function scripts() {
 }
 
 exports.scripts = scripts;
+
+function fonts() {
+  return gulp.src('src/vendor/fonts/*.(woff|woff2|ttf)', {encoding: false})
+            .pipe(gulp.dest('dist/fonts'))
+}
+
+
+exports.fonts = fonts;
 
 function clean() {
   return del('dist');
@@ -89,9 +84,28 @@ function scss() {
 
 exports.scss = scss;
 
+function pageScss() {
+  const plugins = [
+        autoprefixer(),
+        mediaquery(),
+        cssnano()
+  ];
+  return gulp.src('src/pages/*.scss')
+        .pipe(sass({errLogToConsole: true}))
+        .pipe(cssimport())
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest('dist/'))
+        .pipe(browserSync.reload({stream: true}));
+}
+
+exports.pageScss = pageScss;
+
 function watchFiles() {
   gulp.watch(['src/**/*.pug'], pug);
-  gulp.watch(['src/**/*.scss'], scss);
+  gulp.watch(['src/layouts/*.scss'], scss);
+  gulp.watch(['src/pages/*.scss'], pageScss);
+  gulp.watch(['src/components/**/*.scss'], pageScss);
+  gulp.watch(['src/vendors/fonts/*.{woff,woff2,ttf}'], fonts);
   gulp.watch(['src/scripts/*.js'], scripts);
 }
 
@@ -103,7 +117,7 @@ function serve() {
   });
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, scss, scripts));
+const build = gulp.series(clean, gulp.parallel(pug, scss, pageScss, fonts, scripts));
 
 exports.build = build;
 
