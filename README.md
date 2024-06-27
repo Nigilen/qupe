@@ -1,4 +1,5 @@
-# Тестовое задание от Qupe
+# Тестовое задание от [Qupe](https://qupe.ru/) 
+
 
 Задание (прямая цитата):
 > [ссылка на макет в Figma](https://www.figma.com/file/1p1wCs1y8E0dKvReLwYdKp/Test-task?node-id=0%3A1)
