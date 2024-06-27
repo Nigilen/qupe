@@ -1,17 +1,21 @@
 .footer {
-  background-color: #D87FF6;
+  background-color: #d87ff6;
 }
 
 .footer-list {
   padding: 27.5px 220.5px 27.5px 204.5px;
-  display: flex;
-  gap: 175px;
+  display: grid;
+  justify-content: space-between;
   list-style: none;
+  grid-template-columns: repeat(4, auto);
   margin: 0;
 }
 
-.footer-item {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 45px;
+@media (width < 768px) {
+  .footer-list {
+    grid-template-columns: repeat(2, auto);
+    padding: 27.5px 120.5px 27.5px 104.5px;
+    justify-content: center;
+    gap: 50px;
+  }
 }

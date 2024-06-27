@@ -1,25 +1,30 @@
 .utp {
   margin-block-end: 40px;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
   gap: 9px;
 }
 
 .utp-title {
-  font-size: 28px;
+  font-size: clamp(1.25rem, 1.0142rem + 1.0063vw, 1.75rem);
   font-weight: 500;
   line-height: 45px;
   margin: 0;
 }
 
 .utp-button {
-  background-color: #FF4B4B;
+  background-color: var(--accent-color);
   border: none;
   border-radius: 25px;
   padding: 15px 25px;
-  font-size: 24px;
+  font-size: clamp(1.125rem, 0.9481rem + 0.7547vw, 1.5rem);
   line-height: 28.13px;
-  color: #fff;
   cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  white-space: nowrap;
+}
+
+.utp-button:hover {
+  box-shadow: 2px 5px 10px 0 var(--shadow-color);
 }

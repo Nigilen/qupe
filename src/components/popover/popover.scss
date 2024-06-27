@@ -1,0 +1,42 @@
+.popover:popover-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: min(400px, 90%);
+  aspect-ratio: 1 / 1;
+  border: none;
+  background-color: var(--bg-color);
+}
+
+.btn-close {
+  background-color: var(--shadow-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  inset-block-start: 15px;
+  inset-inline-end: 15px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.btn-close:hover {
+  box-shadow: 2px 5px 10px 0 var(--shadow-color);
+}
+
+.btn-close span {
+  font-size: 20px;
+  line-height: 23.44px;
+  color: var(--text-color);
+}
+
+.popover p {
+  line-height: 45px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.popover::backdrop {
+  background-color: #0007;
+}

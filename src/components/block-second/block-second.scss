@@ -6,27 +6,25 @@
 
 .block-second-list {
   display: grid;
-  background-color: #BEB9FF;
+  background-color: #beb9ff;
   padding-block-end: 5px;
   gap: 13px;
   grid-template-columns: 33.5% auto 13.84%;
-  /* Два ряда */
   grid-template-rows: auto auto;
-  /* Автоматическое размещение в ряд */
   grid-auto-flow: row;
 }
 
 .block-second-title {
-  font-size: 30px;
+  font-size: clamp(1.375rem, 1.1392rem + 1.0063vw, 1.875rem);
   font-weight: 600;
   line-height: 45px;
   margin: 0;
-  margin-left: 542px;
-  justify-content: space-between;
+  margin-left: 46.32%;
 }
+
 .block-second-item {
   counter-increment: cnt;
-  background-color: #3ADE4B;
+  background-color: #3ade4b;
   font-size: 53px;
   justify-content: center;
   display: flex;
@@ -40,18 +38,27 @@
 }
 
 .block-second-item:nth-of-type(1) {
-  width: max(392px, 33.5%);
+  width: min(392px, 100%);
   grid-column: 1 / 2;
 }
+
 .block-second-item:nth-of-type(2) {
-  width: max(765px, 65.3%);
+  width: min(765px, 100%);
   grid-column: 2 / 4;
 }
+
 .block-second-item:nth-of-type(3) {
-  width: max(995px, 85%);
+  width: min(995px, 254%);
   grid-column: 1 / 2;
 }
+
 .block-second-item:nth-of-type(4) {
-  width: max(163px, 13.84%);
+  width: min(163px, 100%);
   grid-column: 3 / 4;
+}
+
+@media (width < 768px) {
+  .block-second-title {
+    margin: 0 auto;
+  }
 }

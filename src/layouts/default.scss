@@ -1,3 +1,17 @@
-@import url('../components/globals.scss');
-@import url('../vendor/fonts.scss');
+@import "../components/variables";
+@import "../components/globals";
+@import "../vendor/fonts";
 
+.section-title {
+  font-size: var(--second-heading-size);
+  font-weight: 600;
+  line-height: 45px;
+  margin-block: 0;
+  margin-left: 46.32%;
+}
+
+@media (width < 768px) {
+  .section-title {
+    margin: 0 auto;
+  }
+}
