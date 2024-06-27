@@ -38,7 +38,7 @@ exports.html = html;
 
 function scripts() {
   return gulp.src('src/scripts/*.js')
-            .pipe(gulp.dest('dist/scripts'))
+            .pipe(gulp.dest('dist/'))
 }
 
 exports.scripts = scripts;
