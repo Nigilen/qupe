@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="/scripts/main.js" defer> </script>
+  </head>
+  <body> 
+    <header class="header">
+      <nav class="header-nav"> 
+        <ul class="site-nav-list"> 
+          <li class="site-nav-item"> <a class="nav-link" href="#block-second">Text </a></li>
+          <li class="nav-item"> <a class="nav-link" href="#block-third">Text </a></li>
+          <li class="nav-item"> <a class="nav-link" href="#utp">Text </a></li>
+        </ul>
+        <div class="user-nav"> 
+          <ul class="user-nav-list">
+            <li class="user-nav-item"> <a class="nav-link" href="#">Text </a></li>
+            <li class="user-nav-item"> <a class="nav-link" href="#">Text </a></li>
+            <li class="user-nav-item"> <a class="nav-link" href="#">Text </a></li>
+            <li class="user-nav-item"> <a class="nav-link" href="#">Text</a></li>
+          </ul>
+          <button class="utp-button" popovertarget="popover" type="button">Open pop-up button</button>
+        </div>
+        <button class="burger" type="button">
+          <svg width="44" height="27" viewBox="0 0 44 27" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1.5" x2="43.3738" y2="1.5" stroke-width="3"></line>
+            <line y1="13.5" x2="43.3738" y2="13.5" stroke-width="3"></line>
+            <line y1="25.5" x2="43.3738" y2="25.5" stroke-width="3"></line>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero container">
+        <div class="hero-slider"> 
+          <ul class="slider-list"> 
+            <li class="slider-item">
+              <h1 class="hero-title">H1&nbsp;&nbsp;text</h1>
+              <button class="utp-button" popovertarget="popover" type="button">Open pop-up button</button>
+            </li>
+            <li class="slider-item">
+              <h1 class="hero-title">H1&nbsp;&nbsp;text</h1>
+              <button class="utp-button" popovertarget="popover" type="button">Open pop-up button</button>
+            </li>
+          </ul>
+          <button class="slider-control slider-control--left" type="button">
+            <svg width="40" height="77" viewBox="0 0 40 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M39.0264 75.5961L1.7475 38.3171L39.0264 1.03821" stroke="white" stroke-width="2"></path>
+            </svg>
+          </button>
+          <button class="slider-control slider-control--right" type="button">
+            <svg width="40" height="77" viewBox="0 0 40 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.898804 1.03821L38.1777 38.3172L0.898804 75.5961" stroke="white" stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="block-second" id="block-second">
+        <h2 class="section-title">H2 text</h2>
+        <div class="block-second-list">
+          <div class="block-second-item"></div>
+          <div class="block-second-item"></div>
+          <div class="block-second-item"></div>
+          <div class="block-second-item"></div>
+        </div>
+      </section>
+      <section class="block-third" id="block-third">
+        <h2 class="section-title">H2 text</h2>
+        <div class="block-third-list">
+          <div class="block-third-item"></div>
+          <div class="block-third-item"></div>
+          <div class="block-third-item"></div>
+          <div class="block-third-item"></div>
+          <div class="block-third-item"></div>
+        </div>
+      </section>
+      <section class="utp" id="utp">
+        <h2 class="utp-title">Text utp</h2>
+        <button class="utp-button" popovertarget="popover" type="button">Open pop-up button</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="footer-list">
+        <li class="footer-item"><a class="nav-link" href="#">Text</a></li>
+        <li class="footer-item"><a class="nav-link" href="#">Text</a></li>
+        <li class="footer-item"><a class="nav-link" href="#">Text</a></li>
+        <li class="footer-item"><a class="nav-link" href="#">Text</a></li>
+      </ul>
+    </footer>
+    <div class="popover" id="popover" popover>
+      <p>Pop-up</p>
+      <button class="btn-close" popovertarget="popover" popovertargetaction="hide"><span aria-hidden="true">X</span><span class="visually-hidden"></span></button>
+    </div>
+  </body>
+</html>
