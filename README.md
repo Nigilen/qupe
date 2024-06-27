@@ -25,4 +25,3 @@
 
 
 ![](task-img-01.png)
-![](task-img-02.png)
